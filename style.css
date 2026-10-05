@@ -1,0 +1,568 @@
+:root {
+    --rosa: #ff5c8a;
+    --rosa-claro: #fff0f5;
+    --rosa-escuro: #d93668;
+    --texto: #30252a;
+    --branco: #ffffff;
+    --fundo: #fffafa;
+    --cinza: #756970;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+
+    transition: background 0.4s, color 0.4s;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 25px;
+}
+
+
+.logo {
+    color: var(--rosa);
+    font-size: 25px;
+}
+
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    color: var(--rosa);
+}
+
+
+.theme-btn {
+    border: none;
+    background: var(--rosa-claro);
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 1100px;
+    min-height: 600px;
+
+    margin: auto;
+    padding: 70px 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+}
+
+
+.hero-text {
+    max-width: 500px;
+}
+
+
+.tag {
+    color: var(--rosa);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.05;
+
+    margin: 15px 0;
+}
+
+
+.hero h2 span {
+    color: var(--rosa);
+}
+
+
+.hero p {
+    color: var(--cinza);
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    background: var(--rosa);
+    color: white;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+    background: var(--rosa-escuro);
+}
+
+
+button.secondary {
+    background: var(--rosa-claro);
+    color: var(--rosa-escuro);
+}
+
+
+/* PUCCA */
+
+.pucca-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.pucca {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: var(--rosa-claro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 150px;
+
+    transition: 0.5s;
+
+    box-shadow:
+        0 20px 50px rgba(255, 92, 138, 0.25);
+}
+
+
+.pucca:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+
+.heart {
+    position: absolute;
+
+    right: 30px;
+    bottom: 20px;
+
+    font-size: 65px;
+
+    color: var(--rosa);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+
+/* SEÇÕES */
+
+.section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+
+.section-title span {
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+
+/* SOBRE */
+
+.about {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.about-image {
+    height: 300px;
+
+    border-radius: 30px;
+
+    background: var(--rosa-claro);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 130px;
+}
+
+
+.about-text h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+
+.about-text p {
+    color: var(--cinza);
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+.message {
+    color: var(--rosa) !important;
+    font-weight: bold;
+}
+
+
+/* CARDS */
+
+.characters-section {
+    background: var(--rosa-claro);
+    max-width: none;
+
+    padding-left: max(25px, calc((100% - 1050px) / 2));
+    padding-right: max(25px, calc((100% - 1050px) / 2));
+}
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+    background: var(--branco);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-image {
+    height: 160px;
+
+    border-radius: 20px;
+
+    background: var(--rosa-claro);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    margin-bottom: 20px;
+}
+
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: var(--cinza);
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+.character-message {
+    text-align: center;
+
+    color: var(--rosa-escuro);
+
+    font-weight: bold;
+
+    margin-top: 30px;
+
+    min-height: 25px;
+}
+
+
+/* CURIOSIDADES */
+
+.curiosity-box {
+    background: var(--rosa-claro);
+
+    border-radius: 30px;
+
+    padding: 45px;
+
+    text-align: center;
+}
+
+
+.curiosity-icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.curiosity-box p {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* INTERAÇÃO */
+
+.interaction {
+    text-align: center;
+
+    padding: 90px 20px;
+
+    background: var(--rosa);
+    color: white;
+}
+
+
+.interaction p {
+    margin: 10px 0 20px;
+}
+
+
+#bigHeart {
+    background: white;
+    color: var(--rosa);
+
+    font-size: 55px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+}
+
+
+#bigHeart:hover {
+    transform: scale(1.1);
+}
+
+
+#likeMessage {
+    min-height: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #2d2328;
+
+    color: white;
+}
+
+
+/* TEMA ESCURO */
+
+body.dark {
+    --fundo: #211c1f;
+    --branco: #2e272b;
+    --texto: #fff;
+    --cinza: #c5b9bf;
+    --rosa-claro: #3b292f;
+}
+
+
+/* ANIMAÇÃO */
+
+.pulse {
+    animation: pulse 0.4s ease;
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .pucca {
+        width: 240px;
+        height: 240px;
+
+        font-size: 120px;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
